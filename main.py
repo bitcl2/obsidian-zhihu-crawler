@@ -196,7 +196,7 @@ if __name__=='__main__':
     for  i in  tqdm(range(len(urls))):
         content = None
         url = urls[i]
-        title = titles[i]
+        title = titles[i].replace('/','-')
 
         if url.find('zhuanlan')!=-1:
             content = get_single_post_content(url)
